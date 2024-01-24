@@ -37,4 +37,7 @@ export class LoginComponent implements OnInit {
   AWSlogin(){
     window.location.href = 'https://cognitserver.auth.us-east-1.amazoncognito.com/signup?client_id=42h5av3a5lcdc828eucss13cq8&response_type=code&scope=email+openid+phone&redirect_uri=http%3A%2F%2Flocalhost%3A4200%2Fdashboard'
   }
+  navigatio(){
+    this.router.navigateByUrl('/forget-pass')
+  }
 }

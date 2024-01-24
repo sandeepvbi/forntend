@@ -232,8 +232,8 @@ export const navItems: INavData[] = [
         url: '/register'
       },
       {
-        name: 'Error 404',
-        url: '/404'
+        name: 'Error forget-pass',
+        url: '/forget-pass'
       },
       {
         name: 'Error 500',

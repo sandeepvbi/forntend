@@ -14,14 +14,14 @@ export class RegisterComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private http: HttpClient, private router: Router)  { }
   ngOnInit() {
     this.signupForm = this.formBuilder.group({
-      username:[""],
+      userName:[""],
       email: [""],
       password: [""],
       c_password:[""]
     })
   }
   Register(){
-    this.http.post('http://localhost:5000/api/v1/user',this.signupForm.value).subscribe((res:any)=>{
+    this.http.post('http://localhost:5000/api/v1/register',this.signupForm.value).subscribe((res:any)=>{
       if(res.status == 200){
         console.log("login",res);
         this.router.navigateByUrl('/dashboard')

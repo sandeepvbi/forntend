@@ -1,22 +1,20 @@
-<div class="bg-light min-vh-100 d-flex flex-row align-items-center">
+<div class="col-md-4 offset-md-4 col-sm-6 offset-sm-3">
   <c-container>
-    <c-row class="justify-content-center">
-      <c-col md="6">
-        <div class="clearfix">
-          <h1 class="float-start display-3 me-4">404</h1>
-          <h4 class="pt-3">Oops! You're lost.</h4>
-          <p class="text-medium-emphasis float-start">
-            The page you are looking for was not found.
-          </p>
+    <h1> Forgot Password</h1>
+  <p class="mb-4">
+    Enter your Email Id and you Will get the instarction for in Account details
+  </p>
+    <c-row class="justify-content-center ">
+      <form [formGroup]="forgotForm">
+        <div class="form-group">
+          <label for="email">Email : </label>
+          <input type="email" name="email" class="form-control" placeholder="Email" formControlName="email">
         </div>
-        <c-input-group class="input-prepend">
-          <span cInputGroupText>
-            <svg cIcon name="cilMagnifyingGlass"></svg>
-          </span>
-          <input cFormControl placeholder="What are you looking for?" type="text" />
-          <button cButton color="info">Search</button>
-        </c-input-group>
-      </c-col>
+        <div class="text-center mt-2">
+          <button type="submit" type="button" class="btn btn-primary" [disabled]="forgotForm.invalid" [class.disaled]="forgotForm.invalid" (click)="login()">Login</button>
+          <button routerLink="/login" type="submit" type="button" class="btn btn-info">Cancel</button>
+        </div>
+      </form>
     </c-row>
   </c-container>
 </div>

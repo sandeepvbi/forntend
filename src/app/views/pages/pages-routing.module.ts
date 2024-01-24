@@ -7,10 +7,10 @@ import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   {
-    path: '404',
+    path: '/forget-pass',
     component: Page404Component,
     data: {
-      title: 'Page 404'
+      title: 'forgot password Page '
     }
   },
   {
